@@ -1,0 +1,17 @@
+package rest;
+
+import jakarta.ws.rs.Path;
+
+@Path("/type/")
+public class apiType {
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	@Consumes("text/plain")
+	public String plainText(){
+		
+		String text = "Hello Plain Text";
+		return text;
+	}
+	
+}

@@ -1,0 +1,8 @@
+package rest;
+
+import jakarta.ws.rs.Path;
+
+@Path("/type/")
+public class apiType {
+
+}

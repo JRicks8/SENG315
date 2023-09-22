@@ -1,0 +1,10 @@
+package rest;
+
+@Path("/hello/")
+public class hello {
+	
+	public String helloWorld() {
+		System.out.println("Hello, World!");
+	}
+	
+}

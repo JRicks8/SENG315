@@ -1,0 +1,14 @@
+package rest;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+
+@Path("/hello/")
+public class hello {
+	
+	@GET
+	public String helloWorld() {
+		System.out.println("Hello, World!");
+	}
+	
+}

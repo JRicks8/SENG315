@@ -1,0 +1,23 @@
+#heroicHeader {
+	color: #0ccac4;
+	font-family: 'Bigelow Rules';
+	font-size: 100px;
+	text-align: center;
+}
+
+#jumbotron {
+	background-color: #282c34;
+}
+
+body {
+  padding-top: 10px;
+  background: linear-gradient(
+    to left,
+    rgba(7, 27, 82, 1) 0%,
+    rgba(0, 128, 128, 1) 100%
+  );
+}
+
+.card {
+	background-color: #0ccac4;
+}
