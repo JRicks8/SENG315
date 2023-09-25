@@ -5,6 +5,8 @@ C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1611121668.
 \Week1\src\main\java
 C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\865968000.index
 \Week2\src\main\java
+C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\895829181.index
+\Week4Maven\src\main\java
 C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\264237578.index
 \Week2Proj2\src\main\java
 C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2078489998.index
