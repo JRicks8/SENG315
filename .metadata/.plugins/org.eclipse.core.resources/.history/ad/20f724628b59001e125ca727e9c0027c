@@ -1,6 +1,0 @@
-package rest;
-
-@Path("/type/")
-public class apiType {
-
-}

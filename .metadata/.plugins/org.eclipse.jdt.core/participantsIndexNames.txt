@@ -9,5 +9,7 @@ C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\895829181.i
 \Week4Maven\src\main\java
 C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\264237578.index
 \Week2Proj2\src\main\java
+C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3370011703.index
+\MariaDBExample\src\main\java
 C:\Dev\SENG315\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2078489998.index
 \Week4Jars\src\main\java
