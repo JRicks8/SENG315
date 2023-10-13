@@ -29,4 +29,7 @@
     <fullyQualifiedTypeName name="rest.MariaDBExample.model.Contact"/>
     <fullyQualifiedTypeName name="jakarta.ws.rs.PUT"/>
     <fullyQualifiedTypeName name="jakarta.ws.rs.DELETE"/>
+    <fullyQualifiedTypeName name="rest.Blog.dao.ContactsDAO"/>
+    <fullyQualifiedTypeName name="rest.Blog.dao.MariaDBContactsImpl"/>
+    <fullyQualifiedTypeName name="rest.Blog.model.Contact"/>
 </qualifiedTypeNameHistroy>

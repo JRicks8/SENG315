@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=".btn {"/>
+		<item key="selection" value="postTitle"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="postTitle"/>
+			<item value="edit"/>
+			<item value="Home"/>
+			<item value="contact"/>
+			<item value="postID"/>
+			<item value="postid"/>
+			<item value="postId"/>
+			<item value="parms"/>
+			<item value="postBody"/>
+			<item value="rolodex"/>
+			<item value="rolo"/>
+			<item value="Contact"/>
+			<item value="postContent"/>
+			<item value="postName"/>
 			<item value=".btn {"/>
-			<item value="btn"/>
-			<item value="button {"/>
-			<item value="table {"/>
-			<item value="table"/>
-			<item value="th"/>
-			<item value="jdbc"/>
-			<item value="jbdc"/>
-			<item value="welcome to"/>
-			<item value="--bs-text-opacity"/>
-			<item value="opacity"/>
-			<item value="max-width: 30rem"/>
-			<item value="max-width: "/>
-			<item value=".masthead"/>
-			<item value="h1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Post"/>
+			<item value="post"/>
+			<item value="postTitle"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="807"/>
-		<item key="DIALOG_Y_ORIGIN" value="264"/>
+		<item key="DIALOG_X_ORIGIN" value="1515"/>
+		<item key="DIALOG_Y_ORIGIN" value="359"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
