@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 spellingEnabled=false
 tabWidth=2
+warn_if_input_derived=false
