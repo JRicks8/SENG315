@@ -15,6 +15,20 @@
 		<%@include file=".\includes\articleAdd.jsp" %>
 	<%} else if (view.equals("articleedit")) {%>
 		<%@include file=".\includes\articleEdit.jsp" %>
+	<%} else if (view.equals("navigationlist")) {%>
+		<%@include file=".\includes\navigationList.jsp" %>
+	<%} else if (view.equals("navedit")) {%>
+		<%@include file=".\includes\navigationEdit.jsp" %>
+	<%} else if (view.equals("categorylist")) {%>
+		<%@include file=".\includes\categoryList.jsp" %>
+	<%} else if (view.equals("catedit")) {%>
+		<%@include file=".\includes\categoryEdit.jsp" %>
+	<%} else if (view.equals("useradd")) {%>
+		<%@include file=".\includes\userAdd.jsp" %>
+	<%} else if (view.equals("useredit")) {%>
+		<%@include file=".\includes\userEdit.jsp" %>
+	<%} else if (view.equals("userlist")) {%>
+		<%@include file=".\includes\userList.jsp" %>
 	<%} else {%>
 		<%@include file=".\includes\dashboard.jsp" %>
 	<%}%>

@@ -2,7 +2,6 @@ package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.util.Date;
 
 import org.json.JSONArray;
@@ -16,16 +15,10 @@ public class Article {
 	Date articleCreateDate;
 	int articleVisible;
 	int categoryID;
+	String articleImage;
 	
 	public Article() {
 		
-	}
-	
-	public Article(int articleID, int articleAuthorID, String articleTitle, String articleContent) {
-		this.articleID = articleID;
-		this.articleAuthorID = articleAuthorID;
-		this.articleTitle = articleTitle;
-		this.articleContent = articleContent;
 	}
 	
 	public JSONArray listArticles() {
@@ -34,6 +27,20 @@ public class Article {
 			
 		String sqlString = "SELECT * " +
 		"FROM "+mssqlConnection.getDatabase()+".dbo.articles WITH (NOLOCK) ";
+		
+		SQLQuery sqlQuery = new SQLQuery();
+		sqlQuery.setSqlString(sqlString);
+		
+		return sqlQuery.lstQuery();
+	}
+	
+	public JSONArray listArticlesByCategory() {
+		
+		MSSQLConnection mssqlConnection = new MSSQLConnection();
+			
+		String sqlString = "SELECT * " +
+		"FROM "+mssqlConnection.getDatabase()+".dbo.articles WITH (NOLOCK) " +
+		"WHERE categoryID="+categoryID+"";
 		
 		SQLQuery sqlQuery = new SQLQuery();
 		sqlQuery.setSqlString(sqlString);
@@ -50,12 +57,15 @@ public class Article {
 			Connection connection = mssqlConnection.getConnection();
 			
 			String updateArticle = "UPDATE "+mssqlConnection.getDatabase()+".dbo.articles SET " +
-					"articleTitle=IsNull(NullIf(?,''),articleTitle), articleContent=IsNull(NullIf(?,''),articleContent) " +
+					"articleTitle=IsNull(NullIf(?,''),articleTitle), articleContent=IsNull(NullIf(?,''),articleContent)," +
+					"articleImage=IsNull(NullIf(?,''),articleImage), categoryID=IsNull(?,categoryID) "+
 					"WHERE articleID="+articleID+"";
 			
 			PreparedStatement ps = connection.prepareStatement(updateArticle);
 			ps.setString(1, articleTitle);
 			ps.setString(2, articleContent);
+			ps.setString(3, articleImage);
+			ps.setInt(4, categoryID);
 			ps.executeUpdate();
 			
 			try { if (ps!= null) ps.close(); } catch (Exception e) {};
@@ -90,7 +100,7 @@ public class Article {
 			Connection connection = mssqlConnection.getConnection();
 	
 			String addArticle = "INSERT "+mssqlConnection.getDatabase()+".dbo.articles " +
-					"(articleAuthorID, articleTitle, articleContent, articleCreateDate, articleVisible, categoryID) VALUES (?,?,?,?,?,?)";
+					"(articleAuthorID, articleTitle, articleContent, articleCreateDate, articleVisible, categoryID, articleImage) VALUES (?,?,?,?,?,?,?)";
 			
 			PreparedStatement ps = connection.prepareStatement(addArticle);
 			
@@ -102,6 +112,7 @@ public class Article {
 			ps.setTimestamp(4, new java.sql.Timestamp(date.getTime()));
 			ps.setInt(5, articleVisible);
 			ps.setInt(6, categoryID);
+			ps.setString(7, articleImage);
 			
 			ps.executeUpdate();
 			
@@ -170,6 +181,14 @@ public class Article {
 
 	public void setCategoryID(int categoryID) {
 		this.categoryID = categoryID;
+	}
+
+	public String getArticleImage() {
+		return articleImage;
+	}
+
+	public void setArticleImage(String articleImage) {
+		this.articleImage = articleImage;
 	}
 	
 	

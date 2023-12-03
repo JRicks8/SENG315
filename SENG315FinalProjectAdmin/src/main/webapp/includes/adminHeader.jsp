@@ -1,5 +1,12 @@
 <%
-	String view = request.getParameter("view");
+		String view = request.getParameter("view");
+		
+		String username = (String)session.getAttribute("username");
+		String userID = (String)session.getAttribute("userID");	
+		
+		if (null == session.getAttribute("loggedIn")) {
+				response.sendRedirect(".\\login.jsp");
+		}
 %>
 
 <!DOCTYPE html>
@@ -17,9 +24,6 @@
 
   <!-- Custom fonts for this template-->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Page level plugin CSS-->
-  <link href="assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin.css" rel="stylesheet">

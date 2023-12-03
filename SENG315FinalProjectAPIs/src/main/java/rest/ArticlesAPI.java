@@ -6,7 +6,9 @@ import org.json.JSONObject;
 
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.HeaderParam;
 import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -16,7 +18,6 @@ import service.ArticleService;
 public class ArticlesAPI {
 	
 	@GET
-	@Path("/list/")
 	@Produces("application/json")
 	@Consumes("application/json")
 	public String listArticles() {
@@ -27,8 +28,19 @@ public class ArticlesAPI {
 		
 	}
 	
-	@POST
-	@Path("/update/")
+	@GET
+	@Path("/listByCategory/{id}/")
+	@Produces("application/json")
+	@Consumes("application/json")
+	public String listArticlesByCategory(@PathParam("id") Integer id) {
+		
+		JSONArray articles = ArticleService.listArticlesByCategory(id);
+		
+		return articles.toString();
+		
+	}
+	
+	@PUT
 	@Produces("application/json")
 	@Consumes("application/json")
 	public String updateArticle(String inputParms) {
@@ -54,11 +66,9 @@ public class ArticlesAPI {
 		JSONObject article = ArticleService.getArticle(id);
 		
 		return article.toString();
-		
 	}
 	
 	@POST
-	@Path("/add/")
 	@Produces("application/json")
 	@Consumes("application/json")
 	public String addArticle(String inputParms) {

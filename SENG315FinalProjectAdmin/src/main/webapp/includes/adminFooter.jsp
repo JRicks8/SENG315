@@ -31,7 +31,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="./logout.jsp">Logout</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,10 @@
   <!-- Custom scripts for all pages-->
   <script src="assets/js/sb-admin.min.js"></script>
   <script src="assets/js/scripts.js"></script>
-
+	<script src="assets/js/articles.js"></script>
+	<script src="assets/js/navigations.js"></script>
+	<script src="assets/js/categories.js"></script>
+	<script src="assets/js/users.js"></script>
 
 </body>
 

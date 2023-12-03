@@ -18,6 +18,17 @@ public class ArticleService {
 		return articles;
 	}
 	
+	public static JSONArray listArticlesByCategory(int categoryID) {
+		
+		JSONArray articles = new JSONArray();
+		
+		Article article = new Article();
+		article.setCategoryID(categoryID);
+		articles = article.listArticlesByCategory();
+		
+		return articles;
+	}
+	
 	public static JSONObject updateArticle(JSONObject inputParms) {
 		String message = "";
 		
@@ -29,12 +40,14 @@ public class ArticleService {
 			String articleTitle = inputParms.getString("articleTitle");
 			String articleContent = inputParms.getString("articleContent");
 			int categoryID = inputParms.getInt("categoryID");
+			String articleImage = inputParms.getString("articleImage");
 			
 			Article article = new Article();
 			article.setArticleID(articleID);
 			article.setArticleTitle(articleTitle);
 			article.setArticleContent(articleContent);
 			article.setCategoryID(categoryID);
+			article.setArticleImage(articleImage);
 			
 			message = article.updateArticle();
 			
@@ -70,6 +83,7 @@ public class ArticleService {
 			String articleContent = inputParms.getString("articleContent");
 			int articleAuthorID = inputParms.getInt("articleAuthorID");
 			int categoryID = inputParms.getInt("categoryID");
+			String articleImage = inputParms.getString("articleImage");
 				
 			Article article = new Article();
 			article.setArticleTitle(articleTitle);
@@ -77,6 +91,7 @@ public class ArticleService {
 			article.setArticleAuthorID(articleAuthorID);
 			article.setArticleVisible(1);
 			article.setCategoryID(categoryID);
+			article.setArticleImage(articleImage);
 			
 			message = article.addArticle();
 			

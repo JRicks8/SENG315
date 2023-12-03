@@ -11,7 +11,11 @@
 </div>
 <div class="form-group col-xs-12 col-md-6">
     <label for="authorName">Author ID</label>
-    <input type="text" class="form-control" id="articleAuthorID" required >
+    <input type="text" class="form-control" id="articleAuthorID" value=<%=userID %> readonly >
+</div>
+<div class="form-group col-xs-12 col-md-6">
+    <label for="articleImage">Article Image</label>
+    <input type="text" class="form-control" id="articleImage" required >
 </div>
 <div class="form-group col-xs-12 col-md-12">
     <label for="articleContent">Content</label>

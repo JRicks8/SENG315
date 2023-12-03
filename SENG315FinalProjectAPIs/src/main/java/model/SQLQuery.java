@@ -37,8 +37,15 @@ public class SQLQuery {
                 jsonObject = new JSONObject();
                 
                 for (int i = 0; i < metaData.getColumnCount(); i++) {
- 
-                	jsonObject.put(metaData.getColumnLabel(i + 1), lstResult.getObject(i + 1).toString().trim());
+            		
+                	String columnName = metaData.getColumnLabel(i + 1);
+                	String fieldValue = lstResult.getString(columnName);
+                	
+                	if (lstResult.wasNull()) {
+                		fieldValue = "";
+                	}
+                	
+                	jsonObject.put(columnName, fieldValue.trim());
                 }
                 
                 jsonArray.put(jsonObject);
@@ -76,10 +83,16 @@ public class SQLQuery {
             while (getResult.next()) {
             	 
                 ResultSetMetaData metaData = getResult.getMetaData();
- 
+            	
                 for (int i = 0; i < metaData.getColumnCount(); i++) {
- 
-                    jsonObject.put(metaData.getColumnLabel(i + 1), getResult.getObject(i + 1).toString().trim());
+                	String columnName = metaData.getColumnLabel(i + 1);
+                	String fieldValue = getResult.getString(columnName);
+                	
+                	if (getResult.wasNull()) {
+                		fieldValue = "";
+                	}
+                	
+                	jsonObject.put(columnName, fieldValue.trim());
                 }
             }
 		    
