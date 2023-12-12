@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="articleCreateDate"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="context.refresh();"/>
+			<item value=".refresh()"/>
+			<item value="SENG315FinalProjectAPIs/rest"/>
+			<item value="connectionURL"/>
 			<item value="articleCreateDate"/>
 			<item value="detailsModal"/>
 			<item value="detailsmodal"/>
@@ -19,20 +23,18 @@
 			<item value="getArticle"/>
 			<item value="addarticle"/>
 			<item value="container"/>
-			<item value=".btn "/>
-			<item value=".btn"/>
-			<item value="col-centered"/>
-			<item value="editmodal"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="SpringFinalProject"/>
 			<item value="Post"/>
 			<item value="post"/>
 			<item value="postTitle"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1063"/>
-		<item key="DIALOG_Y_ORIGIN" value="300"/>
+		<item key="DIALOG_X_ORIGIN" value="771"/>
+		<item key="DIALOG_Y_ORIGIN" value="189"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
